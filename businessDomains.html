@@ -1,0 +1,18 @@
+<div ng-repeat = "sbdo in dtlsCtrl.selDtls()  | filter : sorg.shortName : true">
+	<div>
+		<table class = "table table-striped table-bordered table-responsive"  ng-style = "dtlsCtrl.bdstyle">	
+			<thead>				
+				<tr>
+					<th>Business Domain</th>
+					<th>Client</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat = "bdo in sbdo.busClients | limitTo : 6 | orderBy: 'bus_domain'">
+					<td>{{ bdo.bus_domain}}</td>
+					<td>{{ bdo.client}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>

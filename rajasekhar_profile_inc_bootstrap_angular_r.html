@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Rajasekhar Reddy Neerubai's Profile</title>
+	<meta charset="utf-8" name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="myStyle2.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-route.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-animate.js"></script>
+    <script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.14.3.js"></script>
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body ng-app = 'myApp'>
+<script src="mymodule.js"></script>
+<script src="myfactoryservices.js"></script>
+<script src="myroute.js"></script>
+<script src="mydirectives.js"></script>
+
+ <script src="mycontrollers.js"></script>
+
+
+	<div class = "container">
+		
+		<section>
+			<h1><strong><u>Rajasekhar Reddy Neerubai's Profile</u></strong></h1>
+			<address>
+		 		23-7-95/25, Santhi Nagar,<br>
+		 		M.R.Palli, Tirupati, 517502.<br>
+				<strong><span class = "glyph glyphicon-phone"> +91-90032 00301</span>      <span class="glyph glyphicon-envelope">  rajasekhar.neerubai@gmail.com  </span></strong><br>
+			</address>
+		</section>
+
+		<div class = 'container'>
+			<ul class = 'nav nav-pills nav-justified'>
+				<li><a href="#/About">About</a></li>
+				<li><a href="#/ProfSum">Professional Summary</a></li>
+				<li><a href="#/Achiev">Achievements</a></li>
+				<li><a href="#/Exp">Experience</a></li>
+				<li><a href="#/Skill">Skillset</a></li>
+				<li><a href="#/Train">Trainings</a></li>
+			</ul>	
+			<hr />		
+			<div ng-view></div>
+		</div>
+	</div>
+</body>
+</html>
