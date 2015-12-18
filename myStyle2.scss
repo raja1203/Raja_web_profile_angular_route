@@ -1,0 +1,32 @@
+$black_color : #444;
+$yellow_color : yellow;
+$blue_color : blue;
+$white_color : white;
+$left_padding : 10px;
+$right_padding : 10px;
+$bold_font : bold;
+
+.boxprop {
+  padding-left : $left_padding;
+  padding-right: $right_padding;
+  font-weight : $bold_font;
+}
+.yellow {
+  background-color : $yellow_color;
+  @extend .boxprop;
+}
+
+.blue {
+  background-color : $blue_color;
+  color : $white_color;
+  @extend .boxprop;
+}
+
+list-group-item {
+  display : list-item;
+}
+
+table > thead {
+  color : $white_color;
+  background-color : $black_color;
+}
