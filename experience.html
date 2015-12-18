@@ -1,0 +1,73 @@
+				<div ng-controller = "ExperienceController as exprCtrl" ng-init = "exprCtrl.visible = false">
+					
+					
+					<label> Select name of Company :
+						<select ng-model = "exprCtrl.selectOrg" ng-options = "cmp for cmp in exprCtrl.org_list" ng-change = "exprCtrl.visible = true">
+						</select>
+					</label>
+					
+					<br>
+					<div ng-show = "exprCtrl.visible">
+						<div ng-repeat = "sorg in exprCtrl.basicDetails | filter : exprCtrl.selectOrg">
+						    
+						    <div class = "row">
+								<div class = 'col-md-6'>
+									<p><strong>Name of Organization : </strong><span ng-bind = "sorg.name"></span>
+	 									    <span ng-class = "{true : 'yellow' , false : 'blue'}[sorg.isRegular]"
+	 									    ng-bind ="sorg.jobType"> </span>
+									</p>
+								</div>
+								<div class = 'col-md-6'>
+									<p ng-hide = "sorg.isRegular">
+										<b>Deployed by </b><span ng-bind = "sorg.parentCompany"></span> 
+									</p>
+								</div>
+							</div>	
+
+							<div class = 'row' >
+								<div class = 'col-md-6'>
+									<p><strong>Designation : </strong><span ng-bind = "sorg.designation"></span></p>								
+								</div>
+								<div class ='col-md-3'>
+									<p><strong>Base Location : </strong><span ng-bind = "sorg.baseLocation"></span></p>
+								</div>
+								<div class = 'col-md-3'>
+									<p><strong>Period : </strong><span ng-bind = "sorg.period"></span></p>
+								</div>
+							</div>					
+
+						    <div ng-controller = "DetailsController as dtlsCtrl">
+
+								<div ng-show = "dtlsCtrl.dvisible = exprCtrl.visible">
+									<button type = "button" class = "btn btn-primary" ng-model="dtlsCtrl.radioModel" ng-click = "dtlsCtrl.setTab(1)" 
+									uib-btn-radio="'rolresp'">
+									<span>Roles_Responsibilities</span>
+									</button>
+
+	 								<button type = "button" class = "btn btn-primary" ng-model="dtlsCtrl.radioModel" ng-click = "dtlsCtrl.setTab(2)"
+	 								uib-btn-radio="'busdom'">						
+	 								<span>Business Domains</span>
+									</button>
+
+									<button type = "button" class = "btn btn-primary" ng-model="dtlsCtrl.radioModel" ng-click = "dtlsCtrl.setTab(3)"                    ng-show = "sorg.multiLocations" uib-btn-radio="'othrloc'">									
+									<span>Other_Locations</span>
+									</button>
+									
+								</div>
+								
+								<div ng-switch = "dtlsCtrl.radioModel">
+									<div ng-switch-when = "rolresp">
+										<div  ng-show = "dtlsCtrl.isSelected(1)" roles-responsibilities></div>
+									</div>
+									<div ng-switch-when = "busdom">
+										<div  ng-show = "dtlsCtrl.isSelected(2)" business-domains></div>
+									</div>
+									<div ng-switch-when = "othrloc">										
+										<div ng-show = "dtlsCtrl.isSelected(3)" other-locations></div>
+									</div>
+								</div>
+							</div>
+						<div>
+					<div>
+
+				</div>

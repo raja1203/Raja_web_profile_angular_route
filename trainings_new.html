@@ -1,0 +1,54 @@
+
+
+				<div ng-controller = "trainController as train">
+				
+					<div class = "btn-group">
+						<button type="button" class="btn btn-primary" ng-click ="isCollapsed = !isCollapsed" ng-model="train.radioModel" uib-btn-radio="'attend'">
+								Trainings Attended
+						</button>
+						<button type="button" class="btn btn-primary" ng-click="isCollapsed = !isCollapsed" ng-model="train.radioModel" 
+						uib-btn-radio="'provid'">
+								Trainings provided
+						</button>
+					</div>
+					<div ng-switch = "train.radioModel">
+						<div ng-switch-when = "attend">
+							<div uib-collapse = "isCollapsed" >
+								<div class = "row">
+									<div class = "col-md-6"> 
+										<ol  class = "list-group">
+											<li class = "list-group-item">Initial Training program by TCS in 1997</li>
+											<li class = "list-group-item">IEF composer training by TCS</li>
+											<li class = "list-group-item">DB2 UDB IBM Malaysia in 1999</li>
+											<li class = "list-group-item">Interviewing skills, Six hats thinking by TCS in 2002</li>
+											<li class = "list-group-item">Internal auditor training by TCS in 2003</li>
+											<li class = "list-group-item">PMP and Six sigma green belt training by IIPM,Chennai in 2007</li>
+										</ol>	
+									</div>
+									<div class = "col-md-6">
+										<ol  class = "list-group">
+											<li class = "list-group-item">SAP CRM by Coremind technologies in 2008</li>
+											<li class = "list-group-item">Function point estimation by IBM in 2009</li>
+											<li class = "list-group-item">HP Quality center training by Pacificorp in 2010</li>
+											<li class = "list-group-item">Siebel CRM by iWarelogic in 2012</li>
+											<li class = "list-group-item">Microsoft business intelligence(SSIS,SSRS,SSAS) by Digiterrati in 2013</li>
+											<li class = "list-group-item">Workday and JIRA training by Electronic arts in 2014</li>
+										</ol>
+									</div>
+								</div>
+							</div>	
+						</div>
+						<div ng-switch-when = "provid">
+							<div uib-collapse="isCollapsed">
+								<div>
+									<ul class ="list-group">
+										<li class = "list-group-item">On the job COOLGen training between 1999 and 2004</li>
+										<li class = "list-group-item">Mainframe training for freshers in 2005</li>
+										<li class = "list-group-item">On the job COOL:Gen training in IBM and HCL in 2008 to 2011</li>
+										<li class = "list-group-item">Corporate training on COOL:Gen in Ford technologies in 2012</li>
+									</ul>								
+								</div>
+							</div>
+						</div>
+					</div>														
+				</div>

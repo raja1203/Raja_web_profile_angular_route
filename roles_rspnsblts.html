@@ -1,0 +1,17 @@
+<div ng-repeat = "srlresp in dtlsCtrl.selDtls()  | filter : sorg.shortName : true">
+
+	<table class = "table table-striped table-bordered table-responsive">	
+		<thead>				
+			<tr>
+				<th>Roles</th>
+				<th>Responsibilities</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat = "rlresp in srlresp.roles_rspnsblts | limitTo : 5">
+				<td>{{ rlresp.role_name}}</td>
+				<td>{{ rlresp.responsibilty}}</td>
+			</tr>
+		</tbody>
+	</table>
+</div>

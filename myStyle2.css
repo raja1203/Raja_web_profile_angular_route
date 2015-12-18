@@ -1,0 +1,28 @@
+/* line 9, ../sass/myStyle2.scss */
+.boxprop, .yellow, .blue {
+  padding-left: 10px;
+  padding-right: 10px;
+  font-weight: bold;
+}
+
+/* line 14, ../sass/myStyle2.scss */
+.yellow {
+  background-color: yellow;
+}
+
+/* line 19, ../sass/myStyle2.scss */
+.blue {
+  background-color: blue;
+  color: white;
+}
+
+/* line 25, ../sass/myStyle2.scss */
+list-group-item {
+  display: list-item;
+}
+
+/* line 29, ../sass/myStyle2.scss */
+table > thead {
+  color: white;
+  background-color: #444;
+}
